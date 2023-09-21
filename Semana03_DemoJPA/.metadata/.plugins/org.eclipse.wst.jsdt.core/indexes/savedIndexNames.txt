@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Computacion e Informatica\Cuarto ciclo\Lenguaje de programacion II\Practica\Semana03_DemoJPA\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2130650895.index
+3166030125.index
+1733455412.index
+0.index
+26924904.index
+1781382268.index
+2818301521.index
