@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Reserva de Habitaciones</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+
+	<div class="container">
+		<h2>Reserva de Habitaciones</h2>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Numero</th>
+					<th>Tipo</th>
+					<th>Precio</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="habitacion : ${habitacionesEnReserva}">
+					<td th:text="${habitacion.id}"></td>
+					<td th:text="${habitacion.numero}"></td>
+					<td th:text="${habitacion.tipo}"></td>
+					<td th:text="${habitacion.precio}"></t>
+				</tr>
+			</tbody>
+		</table>
+
+		<h3>Monto Total por Reservas: <span th:text="${montoTotal}"></span></h3>
+		<form th:action="@{/reserva/confirmacion_reserva}" method="post">
+            <button type="submit" class="btn btn-warning">Confirmar Reserva</button>
+        </form>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+		
+</body>
+</html>
